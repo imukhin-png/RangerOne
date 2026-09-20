@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ranger One — Support</title>
+  <style>
+    :root {
+      --bg: #f5f5f7;
+      --card: #ffffff;
+      --text: #1d1d1f;
+      --sub: #6e6e73;
+      --accent: #2d6a2d;
+      --border: #d2d2d7;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000;
+        --card: #1c1c1e;
+        --text: #f5f5f7;
+        --sub: #98989d;
+        --accent: #5ac85a;
+        --border: #38383a;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 24px 20px;
+      text-align: center;
+    }
+    header h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; }
+    header p  { color: var(--sub); font-size: 15px; margin-top: 4px; }
+    .lang-switch {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .lang-switch button {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      color: var(--sub);
+      cursor: pointer;
+      font-size: 13px;
+      padding: 4px 14px;
+      transition: all 0.15s;
+    }
+    .lang-switch button.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+    section {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 16px;
+      border: 1px solid var(--border);
+    }
+    h2 { font-size: 17px; font-weight: 600; margin-bottom: 12px; }
+    p, li { font-size: 15px; color: var(--sub); }
+    p + p { margin-top: 10px; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .contact-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff !important;
+      border-radius: 12px;
+      padding: 12px 24px;
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 12px;
+      text-decoration: none !important;
+    }
+    footer {
+      text-align: center;
+      color: var(--sub);
+      font-size: 13px;
+      padding: 24px 20px;
+      border-top: 1px solid var(--border);
+    }
+    [data-lang] { display: none; }
+    [data-lang].visible { display: block; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Ranger One</h1>
+  <p data-lang="en" class="visible">Field navigation &amp; coordinates for iPhone and iPad</p>
+  <p data-lang="ru">Полевая навигация и координаты для iPhone и iPad</p>
+  <div class="lang-switch">
+    <button id="btn-en" class="active" onclick="setLang('en')">English</button>
+    <button id="btn-ru" onclick="setLang('ru')">Русский</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- SUPPORT -->
+  <section data-lang="en" class="visible">
+    <h2>Support</h2>
+    <p>Have a question or found a bug? Send an email and I'll get back to you as soon as possible.</p>
+    <a class="contact-btn" href="mailto:i.mukhin@gmail.com">i.mukhin@gmail.com</a>
+  </section>
+  <section data-lang="ru">
+    <h2>Поддержка</h2>
+    <p>Есть вопрос или нашли ошибку? Напишите на почту — отвечу как можно быстрее.</p>
+    <a class="contact-btn" href="mailto:i.mukhin@gmail.com">i.mukhin@gmail.com</a>
+  </section>
+
+  <!-- FEATURES -->
+  <section data-lang="en" class="visible">
+    <h2>About Ranger One</h2>
+    <p>Ranger One is a field navigation tool for iPhone and iPad that shows your position in multiple coordinate systems simultaneously.</p>
+    <ul>
+      <li>WGS-84, SK-42 (Gauss-Krüger), GSK-2011, UTM, MGRS</li>
+      <li>Two-way coordinate input with auto-detection of format</li>
+      <li>Markers and multi-point routes with drag-to-adjust</li>
+      <li>Compass tape with true and magnetic north</li>
+      <li>Wind direction and speed (Open-Meteo)</li>
+      <li>GNSS reliability indicator</li>
+      <li>Apple Maps — standard and satellite imagery</li>
+    </ul>
+  </section>
+  <section data-lang="ru">
+    <h2>О приложении</h2>
+    <p>Ranger One — полевой инструмент навигации для iPhone и iPad, показывающий позицию одновременно в нескольких системах координат.</p>
+    <ul>
+      <li>WGS-84, СК-42 (Гаусса-Крюгера), ГСК-2011, UTM, MGRS</li>
+      <li>Двусторонний ввод координат с авто-определением формата</li>
+      <li>Метки и маршруты с перетаскиванием</li>
+      <li>Лента компаса с истинным и магнитным севером</li>
+      <li>Направление и скорость ветра (Open-Meteo)</li>
+      <li>Индикатор достоверности GNSS</li>
+      <li>Apple Maps — стандартная и спутниковая карты</li>
+    </ul>
+  </section>
+
+  <!-- PRIVACY POLICY -->
+  <section data-lang="en" class="visible">
+    <h2>Privacy Policy</h2>
+    <p><strong>Last updated: September 2026</strong></p>
+
+    <p><strong>Location.</strong> Ranger One uses your device location to show your position on the map and in coordinate panels. Location data is processed on-device. It is also sent to Apple Maps (to render map tiles) and to Open-Meteo (to fetch wind data for your area). These are standard third-party services; see their privacy policies for details.</p>
+
+    <p><strong>Motion data.</strong> If you grant Motion &amp; Fitness permission, the app uses motion data on-device only to power the GNSS reliability heuristic. This data is never stored or transmitted.</p>
+
+    <p><strong>No account required.</strong> Ranger One does not require registration or login. No personal data is collected, stored on our servers, or shared with third parties for advertising or tracking purposes.</p>
+
+    <p><strong>In-App Purchase.</strong> Purchases are processed by Apple through the App Store. We do not collect or store payment information.</p>
+
+    <p><strong>Analytics &amp; tracking.</strong> The app contains no analytics SDK, no advertising network, and no cross-app tracking.</p>
+
+    <p>Questions? <a href="mailto:i.mukhin@gmail.com">i.mukhin@gmail.com</a></p>
+  </section>
+  <section data-lang="ru">
+    <h2>Политика конфиденциальности</h2>
+    <p><strong>Дата обновления: сентябрь 2026</strong></p>
+
+    <p><strong>Местоположение.</strong> Ranger One использует местоположение устройства для отображения вашей позиции на карте и в панели координат. Данные обрабатываются на устройстве. Они также передаются в Apple Maps (для отрисовки карты) и в Open-Meteo (для получения данных о ветре в вашем районе). Это стандартные сторонние сервисы; подробности см. в их политиках конфиденциальности.</p>
+
+    <p><strong>Данные о движении.</strong> При наличии разрешения Motion &amp; Fitness приложение использует данные о движении только на устройстве для эвристики достоверности GNSS. Эти данные не сохраняются и не передаются.</p>
+
+    <p><strong>Без регистрации.</strong> Ranger One не требует аккаунта. Никакие персональные данные не собираются, не хранятся на наших серверах и не передаются третьим лицам в рекламных целях или для трекинга.</p>
+
+    <p><strong>Покупки.</strong> Покупки обрабатываются Apple через App Store. Мы не собираем и не храним платёжные данные.</p>
+
+    <p><strong>Аналитика и трекинг.</strong> Приложение не содержит SDK аналитики, рекламных сетей и межсайтового трекинга.</p>
+
+    <p>Вопросы? <a href="mailto:i.mukhin@gmail.com">i.mukhin@gmail.com</a></p>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Ivan Mukhin &nbsp;·&nbsp; <a href="mailto:i.mukhin@gmail.com">i.mukhin@gmail.com</a></p>
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.classList.toggle('visible', el.dataset.lang === lang);
+    });
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-ru').classList.toggle('active', lang === 'ru');
+    document.documentElement.lang = lang;
+  }
+  // Auto-detect browser language
+  if (navigator.language.startsWith('ru')) setLang('ru');
+</script>
+
+</body>
+</html>
